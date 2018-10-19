@@ -1,30 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include "sieve.h"
 
-int nth_prime(int n){
-
-  int size = n * log(n) * 1.5;
-  char arr[size];
-  int i;
-  for (i = 2; i < size; i ++){
-    arr[i] = 0;
+int main(/*int argc, char * argv[]*/){
+  /*int iterations = 1;
+  int target = 1000000;
+  if(argc > 1){
+    target = atoi(argv[1]);
+  }
+  if(argc > 2){
+    iterations = atoi(argv[2]);
   }
 
-  for (i = 2; i < size; i ++){
-    if (!arr[i]){
-      //printf("%d\n", i);
-      n --;
-      if (!n)
-	return i;
-      for (int j = i; j < size; j += i)
-	arr[j] = 1;
-    }
-  }
-  return i;
-}
+  int ans = 0;
+  while(iterations>0){
+    ans=sieve(target);
+    iterations--;
+    printf("The n=%d prime is %d\n", target, ans );
 
-int main(){
-  printf("%d\n", nth_prime(26));
+    //this is to modify which prime to
+    //potentially avoid CPU caching
+    target++;
+
+    }*/
+  printf("%d\n", sieve(1000000));
   return 0;
+
 }
