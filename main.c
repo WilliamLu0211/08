@@ -23,7 +23,8 @@ int main(/*int argc, char * argv[]*/){
     target++;
 
     }*/
-  printf("%d\n", sieve(1000000));
+  printf("%ld\n", sieve(1000000));
+
   return 0;
 
 }

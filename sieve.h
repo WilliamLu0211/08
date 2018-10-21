@@ -2,4 +2,4 @@
 #include <stdlib.h>
 #include <math.h>
 
-int sieve(int n);
+long sieve(int n);
